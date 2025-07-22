@@ -1,4 +1,4 @@
-import { Timestamp } from 'firebase/firestore';
+import { Timestamp } from '@angular/fire/firestore';
 
 /**
  * Interface for task data with ID.
@@ -21,7 +21,7 @@ export interface Tasks {
 export interface TasksFirestoreData {
   assignedTo?: string[];
   category?: string;
-  date?: Date | Timestamp;
+  date?: Date | Timestamp | string | null;
   description?: string;
   priority?: string;
   subtasks?: { title: string; done: boolean }[];

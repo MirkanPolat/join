@@ -80,11 +80,13 @@ export class TasksFirbaseService {
    *
    * @param date - Date value to convert
    */
-  convertDate(date: Date | Timestamp | undefined): Timestamp {
+  convertDate(date: Date | Timestamp | string | null | undefined): Timestamp {
     if (date instanceof Date) {
       return Timestamp.fromDate(date);
     } else if (date instanceof Timestamp) {
       return date;
+    } else if (typeof date === 'string') {
+      return Timestamp.fromDate(new Date(date));
     }
     return Timestamp.now();
   }
