@@ -18,7 +18,7 @@
       <div class="done-todo-infos">
         <div [routerLink]="'/board'" class="show-todo">
           <div class="circle-container">
-            <img src="/assets/images/main/edit.png" alt="to-do-pencil image" />
+            <img src="assets/images/main/edit.png" alt="to-do-pencil image" />
           </div>
           <div>
             <p class="num-of">{{ getNumberOftasks('todo') }}</p>
@@ -27,7 +27,7 @@
         </div>
         <div [routerLink]="'/board'" class="show-done">
           <div class="circle-container">
-            <img src="/assets/images/main/Vector.png" alt="done check symbol" />
+            <img src="assets/images/main/Vector.png" alt="done check symbol" />
           </div>
           <div>
             <p class="num-of">{{ getNumberOftasks('done') }}</p>
@@ -39,19 +39,19 @@
         <div class="priority-part">
           @if (nextDeadlineInfo.priority === 'Urgent') {
           <div [style.background]="'#ff0000'" class="priority-circle">
-            <img [src]="'/assets/images/main/' + nextDeadlineInfo.priority.toLowerCase() + '.svg'"
+            <img [src]="'assets/images/main/' + nextDeadlineInfo.priority.toLowerCase() + '.svg'"
               alt="priority image Urgant" />
           </div>
           }
           @if (nextDeadlineInfo.priority === 'Medium') {
           <div [style.background]="'#ff7a00'" class="priority-circle">
-            <img [src]="'/assets/images/main/' + nextDeadlineInfo.priority.toLowerCase() + '.svg'"
+            <img [src]="'assets/images/main/' + nextDeadlineInfo.priority.toLowerCase() + '.svg'"
               alt="priority image Medium" />
           </div>
           }
           @if (nextDeadlineInfo.priority === 'Low') {
           <div [style.background]="'#7ae229'" class="priority-circle">
-            <img [src]="'/assets/images/main/' + nextDeadlineInfo.priority.toLowerCase() + '.svg'"
+            <img [src]="'assets/images/main/' + nextDeadlineInfo.priority.toLowerCase() + '.svg'"
               alt="priority image Low" />
           </div>
           }

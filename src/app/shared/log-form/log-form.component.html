@@ -1,6 +1,6 @@
 <section class="log-form" [ngClass]="{'visible': isVisible, 'hidden': !isVisible}">
   @if (showBackButton) {
-  <img class="back-button" (click)="backButtonClick.emit()" src="/assets/images/login/goback_arrow.svg"
+  <img class="back-button" (click)="backButtonClick.emit()" src="assets/images/login/goback_arrow.svg"
     alt="go back link">
   }
   <section class="form">
@@ -15,7 +15,7 @@
         <div class="input-wrapper" [ngClass]="{'error': !firstName && firstNameTouched}">
           <label for="firstNameInput">Vorname</label>
           <input [(ngModel)]="firstName" type="text" placeholder="Firstname" (blur)="firstNameTouched = true" />
-          <img src="/assets/images/contactform/person-small.svg" alt="person icon" />
+          <img src="assets/images/contactform/person-small.svg" alt="person icon" />
         </div>
         <div class="input-hint">@if (!firstName && firstNameTouched) {
           <span role="alert">Please enter your first name</span>}
@@ -25,7 +25,7 @@
         <div class="input-wrapper" [ngClass]="{'error': !lastName && lastNameTouched}">
           <label for="lastNameInput">Nachname</label>
           <input [(ngModel)]="lastName" type="text" placeholder="Lastname" (blur)="lastNameTouched = true">
-          <img src="/assets/images/contactform/person-small.svg" alt="person icon">
+          <img src="assets/images/contactform/person-small.svg" alt="person icon">
         </div>
         <div class="input-hint">@if (!lastName && lastNameTouched) {
           <span role="alert">Please enter your last name</span>}
@@ -37,7 +37,7 @@
         <div class="input-wrapper" [ngClass]="{'error': (!email || !isValidEmail()) && emailTouched}">
           <label for="emailInput">E-Mail</label>
           <input [(ngModel)]="email" type="email" placeholder="Email" (blur)="emailTouched = true">
-          <img src="/assets/images/contactform/mail.svg" alt="mail icon">
+          <img src="assets/images/contactform/mail.svg" alt="mail icon">
         </div>
         <div class="input-hint">@if ((!email || !isValidEmail()) && emailTouched) {
           <span role="alert">Please enter a valid email address</span>}
@@ -50,7 +50,7 @@
           <input [(ngModel)]="password" type="password" placeholder="Password" (blur)="passwordTouched = true"
             (input)="onPasswordInput()">
           <img
-            [src]="passwordHasContent ? '/assets/images/icons/visibility_off.svg' : '/assets/images/contactform/lock.svg'"
+            [src]="passwordHasContent ? 'assets/images/icons/visibility_off.svg' : 'assets/images/contactform/lock.svg'"
             alt="password icon">
         </div>
         <div class="input-hint">@if (!validatePassword() && passwordTouched) {
@@ -67,7 +67,7 @@
           <input [(ngModel)]="confirmedPassword" type="password" placeholder="Confirm Password"
             (blur)="confirmedPasswordTouched = true" (input)="onConfirmedPasswordInput()">
           <img
-            [src]="confirmedPasswordHasContent ? '/assets/images/icons/visibility_off.svg' : '/assets/images/contactform/lock.svg'"
+            [src]="confirmedPasswordHasContent ? 'assets/images/icons/visibility_off.svg' : 'assets/images/contactform/lock.svg'"
             alt="password icon">
         </div>
         <div class="input-hint">@if (!matchingPasswords() && confirmedPasswordTouched) {

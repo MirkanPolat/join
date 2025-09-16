@@ -80,13 +80,13 @@ export class CompactTaskComponent {
   getPriorityIcon(): string {
     switch (this.task?.priority?.toLowerCase()) {
       case 'urgent':
-        return '/assets/images/board/prio-urgent.svg';
+        return 'assets/images/board/prio-urgent.svg';
       case 'medium':
-        return '/assets/images/board/prio-medium.svg';
+        return 'assets/images/board/prio-medium.svg';
       case 'low':
-        return '/assets/images/board/prio-low.svg';
+        return 'assets/images/board/prio-low.svg';
       default:
-        return '/assets/images/board/prio-medium.svg';
+        return 'assets/images/board/prio-medium.svg';
     }
   }
 

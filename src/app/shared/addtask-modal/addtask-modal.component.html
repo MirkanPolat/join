@@ -26,7 +26,7 @@
             <input id="dateInput" matInput [matDatepicker]="picker" [(ngModel)]="date" [min]="minDate"
               placeholder="dd/mm/yyyy" (blur)="dateTouched = true" (focus)="picker.open()" />
             <mat-datepicker-toggle matSuffix [for]="picker">
-              <img matDatepickerToggleIcon src="/assets/images/board/calender.svg" alt="calender icon" />
+              <img matDatepickerToggleIcon src="assets/images/board/calender.svg" alt="calender icon" />
             </mat-datepicker-toggle>
             <mat-datepicker id="test-datepicker" #picker></mat-datepicker>
           </div>
@@ -45,13 +45,13 @@
           <p>Priority</p>
           <div class="prio-btn-container">
             <button class="urgent" [ngClass]="{ active: selectedPrio === 'urgent' }" (click)="selectPrio('urgent')">
-              Urgent <img src="/assets/images/board/prio-urgent.svg" alt="" />
+              Urgent <img src="assets/images/board/prio-urgent.svg" alt="" />
             </button>
             <button class="medium" [ngClass]="{ active: selectedPrio === 'medium' }" (click)="selectPrio('medium')">
-              Medium <img src="/assets/images/board/prio-medium.svg" alt="" />
+              Medium <img src="assets/images/board/prio-medium.svg" alt="" />
             </button>
             <button class="low" [ngClass]="{ active: selectedPrio == 'low' }" (click)="selectPrio('low')">
-              Low <img src="/assets/images/board/prio-low.svg" alt="" />
+              Low <img src="assets/images/board/prio-low.svg" alt="" />
             </button>
           </div>
         </div>
@@ -61,7 +61,7 @@
           <div class="custom-select" tabindex="0" (blur)="contactDropDownOpen = false">
             <div class="selected" (click)="contactDropDownOpen = !contactDropDownOpen">
               <span>Select contacts to assign</span>
-              <img src="/assets/images/board/arrow_drop_down.svg" alt="" />
+              <img src="assets/images/board/arrow_drop_down.svg" alt="" />
             </div>
             @if (contactDropDownOpen) {
             <div class="dropdown" (mousedown)="$event.preventDefault()">
@@ -119,7 +119,7 @@
               } @if (category) {
               <span>{{ category }}</span>
               }
-              <img id="img-drop-down" src="/assets/images/board/arrow_drop_down.svg" alt="" />
+              <img id="img-drop-down" src="assets/images/board/arrow_drop_down.svg" alt="" />
             </div>
             @if (categoryDropDownOpen) {
             <div class="dropdown" (mousedown)="$event.preventDefault()">
@@ -145,15 +145,15 @@
           <div class="input-wrapper">
             <input [(ngModel)]="newSubtask" id="subtasks" type="text" placeholder="Add new subtask"
               (keyup.enter)="addSubtask()" (focus)="showSubtaskControls()" (blur)="onSubtaskBlur()" #subtaskInput />
-            <img src="/assets/images/board/add.svg" [class.hide]="isSubtaskActive" alt=""
+            <img src="assets/images/board/add.svg" [class.hide]="isSubtaskActive" alt=""
               (click)="showSubtaskControls()" />
             <div class="focus-subtasks-input" [class.show]="isSubtaskActive">
               <button class="icon-check-button" (click)="addSubtask()">
-                <img class="check" src="/assets/images/board/check.svg" alt="check button" />
+                <img class="check" src="assets/images/board/check.svg" alt="check button" />
               </button>
               <div class="border"></div>
               <button class="icon-close-button" (click)="clearSubtaskInput()">
-                <img class="close" src="/assets/images/board/close.svg" alt="close button" />
+                <img class="close" src="assets/images/board/close.svg" alt="close button" />
               </button>
             </div>
           </div>
@@ -169,13 +169,13 @@
               }
               <div class="subtask-single-item-icons">
                 @if (editingSubtaskIndex === i) {
-                <img src="/assets/images/board/check.svg" alt="save subtask" (click)="saveEditedSubtask()" />
+                <img src="assets/images/board/check.svg" alt="save subtask" (click)="saveEditedSubtask()" />
                 <div class="border"></div>
-                <img src="/assets/images/board/close.svg" alt="cancel edit" (click)="cancelEditSubtask()" />
+                <img src="assets/images/board/close.svg" alt="cancel edit" (click)="cancelEditSubtask()" />
                 } @else {
-                <img src="/assets/images/board/edit.svg" alt="edit subtask" (click)="editSubtask(i)" />
+                <img src="assets/images/board/edit.svg" alt="edit subtask" (click)="editSubtask(i)" />
                 <div class="border"></div>
-                <img src="/assets/images/board/delete.svg" alt="delete subtask" (click)="removeSubtask(i)" />
+                <img src="assets/images/board/delete.svg" alt="delete subtask" (click)="removeSubtask(i)" />
                 }
               </div>
             </li>
@@ -193,10 +193,10 @@
   [style]="useFixedPosition ? buttonStyles : null">
   <button (click)="clearForm()" class="button-white-border">
     <span>Clear</span>
-    <img src="/assets/images/icons/icon-cancel.svg" alt="clear task" />
+    <img src="assets/images/icons/icon-cancel.svg" alt="clear task" />
   </button>
   <button (click)="addTaskToDBViaTemplateClick()" class="button-blue" [disabled]="!title || !date || !category">
     <span>Create Task</span>
-    <img src="/assets/images/icons/icon-check.svg" alt="create task" />
+    <img src="assets/images/icons/icon-check.svg" alt="create task" />
   </button>
 </div>

@@ -1,7 +1,7 @@
 <div class="overlay" [ngClass]="{'visible': isVisible, 'hidden': !isVisible}" (click)="close()">
   <div class="modal" (click)="$event.stopPropagation()">
     <div class="close-btn-wrapper" (click)="close()">
-      <img class="close-btn" src="/assets/images/contactform/cancel.svg" alt="close button">
+      <img class="close-btn" src="assets/images/contactform/cancel.svg" alt="close button">
     </div>
     <app-addtask-modal [useFixedPosition]="false" [initialStatus]="initialStatus" (taskCreated)="close()"
       (successMessage)="taskSuccess.emit($event)">

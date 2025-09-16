@@ -2,12 +2,12 @@
   <div class="nav-wrapper">
     @if (isLimitedMode) {
     <div class="link-container">
-      <img src="/assets/images/sidebar-logo.svg" alt="join-logo">
+      <img src="assets/images/sidebar-logo.svg" alt="join-logo">
 
       <nav class="nav-limited">
         <div>
           <a routerLink="/login" routerLinkActive="active">
-            <img src="/assets/images/icons/icon-login.svg" alt="">
+            <img src="assets/images/icons/icon-login.svg" alt="">
             <span>Log in</span>
           </a>
         </div>
@@ -22,30 +22,30 @@
     </div>
     } @else {
     <div class="link-container">
-      <img src="/assets/images/sidebar-logo.svg" alt="join-logo">
+      <img src="assets/images/sidebar-logo.svg" alt="join-logo">
 
       <nav class="nav-full">
         <div>
           <a routerLink="/summary" routerLinkActive="active-nav" [routerLinkActiveOptions]="{ exact: true }">
-            <img src="/assets/images/icons/icon-summary.svg" alt="">
+            <img src="assets/images/icons/icon-summary.svg" alt="">
             <span>Summary</span>
           </a>
         </div>
         <div>
           <a routerLink="/add-task" routerLinkActive="active-nav" [routerLinkActiveOptions]="{ exact: true }">
-            <img src="/assets/images/icons/icon-add-task.svg" alt="">
+            <img src="assets/images/icons/icon-add-task.svg" alt="">
             <span>Add Tasks</span>
           </a>
         </div>
         <div>
           <a routerLink="/board" routerLinkActive="active-nav" [routerLinkActiveOptions]="{ exact: true }">
-            <img src="/assets/images/icons/icon-board.svg" alt="">
+            <img src="assets/images/icons/icon-board.svg" alt="">
             <span>Board</span>
           </a>
         </div>
         <div>
           <a routerLink="/contacts" routerLinkActive="active-nav" [routerLinkActiveOptions]="{ exact: true }">
-            <img src="/assets/images/icons/icon-contacts.svg" alt="">
+            <img src="assets/images/icons/icon-contacts.svg" alt="">
             <span>Contacts</span>
           </a>
         </div>

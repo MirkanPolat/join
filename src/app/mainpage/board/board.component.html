@@ -11,7 +11,7 @@
     <div class="board-title">
       <h2>Board</h2>
       <button class="button-blue-responsive button-blue" (click)="openAddTask('todo')">
-        <img src="/assets/images/icons/add.svg" alt="add task icon" />
+        <img src="assets/images/icons/add.svg" alt="add task icon" />
       </button>
     </div>
     <div>
@@ -20,11 +20,11 @@
         <input type="text" id="search" [ngModel]="searchText" (ngModelChange)="searchKey($event)"
           placeholder="Find Task" />
         <div class="border-right"></div>
-        <img src="/assets/images/board/search.svg" alt="search icon" />
+        <img src="assets/images/board/search.svg" alt="search icon" />
       </div>
       <button class="button-blue d-none" (click)="openAddTask('todo')">
         <span>Add Task</span>
-        <img src="/assets/images/icons/add.svg" alt="add task icon" />
+        <img src="assets/images/icons/add.svg" alt="add task icon" />
       </button>
     </div>
   </section>

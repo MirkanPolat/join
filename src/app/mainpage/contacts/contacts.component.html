@@ -7,10 +7,10 @@
   <div class="contactlist-container">
     <button class="button-blue" (click)="openAddContactForm()">
       <span>Add new contact</span>
-      <img src="/assets/images/icons/person_add.svg" alt="add icon">
+      <img src="assets/images/icons/person_add.svg" alt="add icon">
     </button>
     <div class="mobil-addContactBtn" (click)="openAddContactForm()">
-      <img src="/assets/images/icons/person_add.svg" alt="add icon">
+      <img src="assets/images/icons/person_add.svg" alt="add icon">
     </div>
     <app-add-contact-modul [isVisible]="isAddContactFormVisible" (closeModal)="closeAddContactForm()"
       (contactCreated)="addContactToDb($event)">
@@ -48,7 +48,7 @@
       <p>Better with a team</p>
     </div>
     <div (click)="goBack()" class="image-container">
-      <img src="/assets/images/icons/arrow-left-line.svg" alt="" />
+      <img src="assets/images/icons/arrow-left-line.svg" alt="" />
     </div>
     @if (!isMobile || (isMobile && isOpen)) {
     <section class="single-contact-container" [ngClass]="{ 'open-contact': isOpen && selectedContact }">
@@ -109,7 +109,7 @@
     </section>
     @if (!isMenuOpen) {
     <div (click)="openOptionsMenu()" class="responsive-options-btns-container">
-      <img src="/assets/images/icons/more_vert.svg" alt="options button">
+      <img src="assets/images/icons/more_vert.svg" alt="options button">
     </div>
     }
 
@@ -117,8 +117,8 @@
     <div class="overlay" (click)="closeOptionsMenu()"></div>
 
     <div (click)="$event.stopPropagation()" class="responsive-options-btns-menu show">
-      <div (click)="openEdit()"><img src="/assets/images/icons/icon-edit.svg" alt="edit contact"><span>Edit</span></div>
-      <div (click)="deleteContact()"><img src="/assets/images/icons/icon-delete.svg"
+      <div (click)="openEdit()"><img src="assets/images/icons/icon-edit.svg" alt="edit contact"><span>Edit</span></div>
+      <div (click)="deleteContact()"><img src="assets/images/icons/icon-delete.svg"
           alt="delete contact"><span>Delete</span></div>
     </div>
     }

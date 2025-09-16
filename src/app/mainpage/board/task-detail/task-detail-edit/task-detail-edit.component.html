@@ -39,17 +39,17 @@
       <button type="button" class="priority-btn urgent" [class.active]="editPriority === 'urgent'"
         (click)="selectPrio('urgent')">
         Urgent
-        <img src="/assets/images/board/prio-urgent.svg" alt="urgent" />
+        <img src="assets/images/board/prio-urgent.svg" alt="urgent" />
       </button>
       <button type="button" class="priority-btn medium" [class.active]="editPriority === 'medium'"
         (click)="selectPrio('medium')">
         Medium
-        <img src="/assets/images/board/prio-medium.svg" alt="medium" />
+        <img src="assets/images/board/prio-medium.svg" alt="medium" />
       </button>
       <button type="button" class="priority-btn low" [class.active]="editPriority === 'low'"
         (click)="selectPrio('low')">
         Low
-        <img src="/assets/images/board/prio-low.svg" alt="low" />
+        <img src="assets/images/board/prio-low.svg" alt="low" />
       </button>
     </div>
   </div>
@@ -59,7 +59,7 @@
     <div class="custom-select" tabindex="0" (blur)="contactDropDownOpen = false">
       <div class="selected" (click)="contactDropDownOpen = !contactDropDownOpen">
         <span>Select contacts to assign</span>
-        <img src="/assets/images/board/arrow_drop_down.svg" alt="" />
+        <img src="assets/images/board/arrow_drop_down.svg" alt="" />
       </div>
       @if (contactDropDownOpen) {
       <div class="dropdown" (mousedown)="$event.preventDefault()">
@@ -113,13 +113,13 @@
       <div class="input-wrapper" [class.focused]="isSubtaskActive">
         <input type="text" placeholder="Add new subtask" #subtaskInput (focus)="showSubtaskControls()"
           (blur)="onSubtaskBlur()" (keyup.enter)="addSubtask(subtaskInput.value); subtaskInput.value = ''" />
-        <img src="/assets/images/board/add.svg" alt="add" [class.hide]="isSubtaskActive"
+        <img src="assets/images/board/add.svg" alt="add" [class.hide]="isSubtaskActive"
           (click)="showSubtaskControls(); subtaskInput.focus()" />
         <div class="focus-subtasks-input" [class.show]="isSubtaskActive">
-          <img class="cancel-btn" src="/assets/images/icons/icon-cancel.svg" alt="cancel"
+          <img class="cancel-btn" src="assets/images/icons/icon-cancel.svg" alt="cancel"
             (click)="onSubtaskBlur(); subtaskInput.value = ''" />
           <div class="border"></div>
-          <img src="/assets/images/board/check.svg" alt="add"
+          <img src="assets/images/board/check.svg" alt="add"
             (click)="addSubtask(subtaskInput.value); subtaskInput.value = ''" />
         </div>
       </div>
@@ -135,9 +135,9 @@
           <span class="subtask-text" [class.completed]="subtask.done">{{ subtask.title }}</span>
           }
           <div class="subtask-single-item-icons">
-            <img src="/assets/images/board/edit.svg" alt="edit subtask" (click)="editSubtask($index)" />
+            <img src="assets/images/board/edit.svg" alt="edit subtask" (click)="editSubtask($index)" />
             <div class="border"></div>
-            <img src="/assets/images/board/delete.svg" alt="delete subtask" (click)="removeSubtask($index)" />
+            <img src="assets/images/board/delete.svg" alt="delete subtask" (click)="removeSubtask($index)" />
           </div>
         </div>
         }
@@ -150,11 +150,11 @@
 <div class="edit-actions">
   <button type="button" class="button-white-border" (click)="onCancelEdit()">
     <span>Cancel</span>
-    <img src="/assets/images/icons/icon-cancel.svg" alt="cancel">
+    <img src="assets/images/icons/icon-cancel.svg" alt="cancel">
   </button>
   <button type="button" class="button-blue" [disabled]="!validateForm()" (click)="saveTask()">
     <span>Ok</span>
-    <img src="/assets/images/icons/icon-check.svg" alt="check icon" />
+    <img src="assets/images/icons/icon-check.svg" alt="check icon" />
   </button>
 </div>
 
